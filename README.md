@@ -12,15 +12,17 @@ The goal of the project is to use Large Language Models (LLM) to describe images
 ## Crowd Counting Framework
 find a good name for this
 
-## Environment
-$ conda create -n crowd-analysis
+## Environment Configuration
+$ conda create -n crowd-analysis python=3.13
 
 $ conda activate crowd-analysis
 
 $ conda install --yes -c pytorch pytorch=1.7.1 torchvision 
 cudatoolkit=11.0 **or** pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 
-$ pip install ftfy regex tqdm
+$ pip install ftfy regex 
+
+$ cd ./crowd-analysis
 
 $ pip install git+https://github.com/openai/CLIP.git
 
