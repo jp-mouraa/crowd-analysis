@@ -26,6 +26,7 @@ $ cd ./crowd-analysis
 
 $ pip install git+https://github.com/openai/CLIP.git
 
-## Useful links
+obs: download frames from Kaggle dataset and storage in ../data/images/CrowdCountingKaggle/frames/
 
+## Useful links
 https://pytorch.org/get-started/locally/
