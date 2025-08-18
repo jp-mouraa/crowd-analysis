@@ -13,7 +13,7 @@ path = kagglehub.dataset_download("trainingdatapro/people-tracking")
 print("Dataset downloaded to:", path)
 
 # destination folder
-dest = "data/datacrowd-analysis/Human"
+dest = "data/raw/HumanTracking"
 
 if not os.path.exists(dest):
     shutil.copytree(path, dest)
