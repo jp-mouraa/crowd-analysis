@@ -8,16 +8,20 @@ import kagglehub
 import shutil
 import os
 
-# download dataset
-path = kagglehub.dataset_download("trainingdatapro/people-tracking")
-print("Dataset downloaded to:", path)
+datasets_config = [("fmena14/crowd-counting", "data/raw/Mall"), 
+                 ("trainingdatapro/people-tracking", "data/raw/HumanTracking")]
 
-# destination folder
-dest = "data/raw/HumanTracking"
+for dataset_path in datasets_config:
+    # download dataset
+    path = kagglehub.dataset_download(dataset_path[0])
+    print("Dataset downloaded to:", path)
 
-if not os.path.exists(dest):
-    shutil.copytree(path, dest)
-else:
-    print("The destination folder already exists!")
+    # destination folder
+    dest = dataset_path[1]
 
-print("Dataset in:", dest)
+    if not os.path.exists(dest):
+        shutil.copytree(path, dest)
+    else:
+        print("The destination folder already exists!")
+
+    print("Dataset in:", dest)
